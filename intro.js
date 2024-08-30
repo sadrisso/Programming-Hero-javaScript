@@ -93,8 +93,10 @@ var a = isNaN(2-10);
 Explain your answers. */
 
 
-// var a = isNaN(‘11’);
+var a = "11";
+let c = parseInt(a);
+console.log(c)
 
-var a = isNaN(2-10);
+var b = isNaN(2-10);
 
-console.log(a)
+console.log(a, b)
