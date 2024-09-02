@@ -136,3 +136,104 @@ while (cnt >= 15) {
     console.log(cnt)
     cnt--;
 }
+
+
+
+let m = 0;
+
+for (let f = 0; f <= 10; f++) {
+    console.log(f);
+    if (f === 5) {
+        break;
+    }
+}
+
+
+for (let g = 0; g <= 10; g++) {
+    if (g % 2 == 0) {
+        continue;
+    }
+    console.log(g)
+}
+
+
+while (m <= 10) {
+    m++;
+    if (m === 10) {
+        continue;
+    }
+    console.log(m);
+}
+
+
+
+/*
+
+Write a loop 1 to 200. Use break to exit the loop once you find 100.
+
+*/
+
+let b = 0;
+
+while(b <= 200) {
+    if (b === 50) {
+        break;
+    }
+    console.log(b)
+    b++;
+}
+
+// for (let c = 0; c <= 200; c++) {
+//     if (c === 100) {
+//         break;
+//     }
+//     console.log(c)
+// }
+
+
+
+/*
+Write a while loop that adds numbers starting from 1, but stops (using break) as soon as the sum reaches or exceeds 100
+*/
+
+
+let summ = 0;
+let num = 10;
+
+while (num <= 100) {
+    summ += num;
+    if (summ >= 100) {
+        break;
+    }
+    num++;
+}
+
+console.log(summ)
+
+
+
+/*
+Write a loop to print even numbers from 1 to 40. Use continue to skip odd numbers.
+*/
+
+
+for (let u = 1; u <= 40; u++) {
+    if (u % 2 !== 0) {
+        continue;
+    }
+    console.log(u)
+}
+
+
+
+
+/*
+display odd number from 55 to 85 and skip the numbers divisible by 5.
+*/
+
+for (let k = 55; k <= 85; k++) {
+    if (k % 2 == 0 && k % 5 == 0) {
+        continue;
+    }
+    console.log(k)
+}
