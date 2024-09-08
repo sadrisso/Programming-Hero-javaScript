@@ -7,3 +7,6 @@ function celsToFahr (cel) {
 
 const celcius = celsToFahr(cel);
 console.log(celcius);
+
+
+
