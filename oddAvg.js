@@ -14,7 +14,7 @@ function oddAvg (numbers) {
     }
     const count = odds.length;
     const avg = sum / count;
-    return `Average is ${avg}`
+    return `Average is ${avg}`;
 }
 
 
