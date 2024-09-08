@@ -79,3 +79,19 @@ function evenOdd (num) {
 
 let evenOrOdd = evenOdd(4);
 console.log(evenOrOdd);
+
+
+
+/* Converter function practice */
+
+
+function inchToFeet (inch) {
+    const freeFraction = inch / 12;
+    const feet = parseInt(freeFraction);
+    const remainingInch = inch % 12;
+    const finalOutput = feet + "feet " + " " + remainingInch + "inch";
+    return finalOutput;
+}
+
+let inchToFeetRes = inchToFeet(75);
+console.log(inchToFeetRes);
