@@ -1,6 +1,6 @@
 
 
-const x = [true,false, 22, 43, "Drisso", "hello", {name: "Masum", age: 34}];
+const x = [true, false, 22, 43, "Drisso", "hello", {name: "Masum", age: 34}];
 
 
 function countBoolean (arr) {
