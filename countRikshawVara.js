@@ -12,4 +12,4 @@ function countRikshawVara (people) {
     return rikshawVara;
 }
 
-console.log("Rikshaw cost :",countRikshawVara(236));
+console.log("Rikshaw cost :", countRikshawVara(236));
