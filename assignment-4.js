@@ -1,7 +1,8 @@
 
 
-function calculateTax(income, expense) {
-    if (expense > income) {
+function calculateTax(income, expense)
+{
+    if (typeof income && expense !== "number" && expense > income) {
         return "Invalid input!";
     }
 
@@ -13,18 +14,22 @@ function calculateTax(income, expense) {
 
 
 
-function sendNotification (email) {
+function sendNotification (email)
+{
+    if (!email.includes("@")) {
+        return "Invalid Email";
+    }
 
     const arr = email.split('@');
-
     const notification = arr[0] + " sent you an email from " + arr[1];
+
     return notification;
 }
 
 
 
-
-function checkDigitsInName(name) {
+function checkDigitsInName(name)
+{
     if (typeof name !== "string") {
         return "Invalid Input";
     }
@@ -39,8 +44,8 @@ function checkDigitsInName(name) {
 }
 
 
-
-function calculateFinalScore(obj) {
+function calculateFinalScore(obj)
+{
     if (typeof obj !== "object") {
         return "Invalid Input";
     }
@@ -63,5 +68,23 @@ function calculateFinalScore(obj) {
 }
 
 
-const result = calculateFinalScore({name: "Rakib", testScore: 40, schoolGrade: 20, isFFamily: true});
-console.log(result)
+
+
+function  waitingTime(waitingTimes  , serialNumber)
+{
+    if (typeof waitingTimes !== "array" && typeof serialNumber !== "number") {
+        return "Invalid Input"
+    }
+
+    let sum = 0;
+    for (time of waitingTimes) {
+        sum += time;
+    }
+
+    const avgTime = sum / waitingTimes.length;
+    const remainingCandidate = serialNumber - waitingTimes.length;
+    const timeLeft = Math.round(remainingCandidate * avgTime);
+
+    return timeLeft;
+}
+
