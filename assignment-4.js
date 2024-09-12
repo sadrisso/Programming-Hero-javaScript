@@ -82,9 +82,8 @@ function  waitingTime(waitingTimes  , serialNumber)
     }
 
     const avgTime = sum / waitingTimes.length;
-    const remainingCandidate = serialNumber - waitingTimes.length;
+    const remainingCandidate = serialNumber - waitingTimes.length -1;
     const timeLeft = Math.round(remainingCandidate * avgTime);
 
     return timeLeft;
 }
-
