@@ -29,7 +29,8 @@ console.log(result);
 
 // Write a program to check the file extension name
 
-function checkFileExt (str) {
+function checkFileExt (str)
+{
     const newStr = str.slice(str.lastIndexOf('.'));
     console.log(newStr)
 }
