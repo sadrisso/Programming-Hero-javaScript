@@ -10,7 +10,7 @@ document.getElementById("btn-login").addEventListener("click", function (e)
 
     if (inputPhone === "5" && inputPin === "1234") {
         console.log("Logged in");
-        window.location.href = "home.html";
+        window.location.href = '/home.html';
     }
     else {
         alert("Wrong input..!")
