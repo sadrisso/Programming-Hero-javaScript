@@ -9,13 +9,13 @@ document.getElementById("add-money-btn").addEventListener("click", function (e)
     const pinNumber = document.getElementById("pin-input").value;
     let mainAmount = document.getElementById("main-amount").innerText;
 
-    console.log(amountNumber, pinNumber, mainAmount)
+    let newBalance = parseInt(mainAmount) + parseInt(amountNumber);
 
     if (pinNumber === "1234") {
-        mainAmount += amountNumber;
-        mainAmount.innerText = mainAmount;
+        document.getElementById("main-amount").innerText = newBalance
     }
     else {
-        alert("Worng!")
+        alert("Invalied pin...")
     }
+
 })
