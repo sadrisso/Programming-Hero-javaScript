@@ -15,3 +15,12 @@ const clockId = setInterval(() => {
         clearInterval(clockId)
     }
 }, 1000);
+
+
+function delaydGreeting (name, time) {
+    setTimeout(() => {
+        console.log("Congratulation ", name)
+    }, time);
+}
+
+delaydGreeting("Habib", 2000)
