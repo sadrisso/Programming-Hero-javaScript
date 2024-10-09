@@ -1,5 +1,6 @@
 
 const buttonsContainer = document.getElementById("categories");
+const selectedPetsContainer = document.getElementById("selected-pets")
 
 
 const categoryData = async () =>
@@ -36,20 +37,23 @@ const displayAllPets = (data) =>
 {
     let allPetDataContainer = document.getElementById("all-pet-data");
     allPetDataContainer.innerHTML = ""
+
     data.forEach((d) => {
-        console.log(d)
         const card = document.createElement("div");
         card.innerHTML = `
             <div class="card card-compact bg-base-100 w-96 shadow-xl">
-            <figure>
-                <img src="${d.image}" />
-            </figure>
-            <div class="card-body">
-                <h2 class="card-title">${d.category}</h2>
-                <p>Price: ${d?.price}</p>
-                <p>Dob: ${d?.date_of_birth}</p>
-                <p>Id: ${d?.petId}</p>
-            </div>
+                <figure>
+                    <img src="${d.image}" />
+                </figure>
+                <div class="card-body">
+                    <h2 class="card-title">${d.category}</h2>
+                    <p>Price: ${d?.price}</p>
+                    <p>Dob: ${d?.date_of_birth}</p>
+                    <p>Id: ${d?.petId}</p>
+                </div>
+                <div class="m-5">
+                    <button class="btn bg-red-500 text-white" onclick="displayByLike('${d.petId}')">Like</button>
+                </div>
             </div>
         `
         allPetDataContainer.append(card);
@@ -66,6 +70,24 @@ const displayByCategory = async (item) =>
     console.log(data?.data)
 
     displayAllPets(data?.data);
+}
+
+const displayByLike = async (id) =>
+{
+
+    console.log(id)
+    const res = await fetch(`https://openapi.programming-hero.com/api/peddy/pet/${id}`)
+    const data = await res.json();
+
+    const selectedPet = document.createElement("div");
+    selectedPet.classList = "w-[100px]"
+    selectedPet.innerHTML = `
+        <img src=${data.petData.image}>
+    `
+
+    selectedPetsContainer.append(selectedPet);
+
+    console.log(data.petData.image)
 }
 
 
