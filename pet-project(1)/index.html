@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Project</title>
+
+    <!-- daisyui cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.13/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+
+<body>
+
+    <header class="w-11/12 mx-auto py-6 space-y-0 lg:space-y-5 flex flex-col lg:flex-row gap-5 justify-normal lg:justify-between items-center">
+        <div class="logo flex flex-col lg:flex-row gap-3">
+            <img src="./images/logo.webp" alt="">
+            <p>Peddy</p>
+        </div>
+        <nav>
+            <ul class="flex gap-6 flex-col lg:flex-row">
+                <li>Home</li>
+                <li>About</li>
+                <li>Pets</li>
+                <li>Shop</li>
+            </ul>
+        </nav>
+        <div>
+            <i class="fa-solid fa-user text-2xl"></i>
+        </div>
+    </header>
+
+    <main>
+        <section class="flex flex-col items-center">
+            <div class="text-center space-y-5">
+                <p class="text-gray-500">Bringing Families Together ❤️‍🔥 </p>
+                <h2 class="text-xl lg:text-4xl font-bold">Your Path to Adoption Starts Here</h2>
+                <p class="w-full lg:w-7/12 mx-auto text-gray-400">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a.</p>
+                <button class="btn btn-primary">View More</button>
+            </div>
+            <div>
+                <img src="./images/pet.webp" alt="">
+            </div>
+        </section>
+
+        <section class="w-11/12 mx-auto text-center space-y-4">
+            <h2 class="text-3xl font-bold">Adopt Your Best Friend</h2>
+            <p class="w-7/12 mx-auto text-gray-400">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a.</p>
+        </section>
+
+        <section class="w-11/12 mx-auto ">
+            <div class="categories flex flex-col lg:flex-row justify-normal lg:justify-evenly items-center"></div>
+        </section>
+
+        <section class="grid grid-cols-1 lg:grid-cols-[3fr_1fr] h-[1000px]">
+            <div class="border" id="all-pet-data">
+                <p class="font-bold text-gray-600 m-[30px_0_30px_30px]">Best Deals For You</p>
+            </div>
+            <div class="border" id="selected-pets">
+                <button class="btn btn-wide btn-warning m-[30px_0_30px_180px]">Sort By Price</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script src="js/index.js"></script>
+</body>
+</html>
